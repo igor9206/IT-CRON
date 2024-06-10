@@ -10,8 +10,8 @@
 
 #### Инструменты
 
-+ Android Studio.
-+ Kotlin.
++ Android Studio
++ Kotlin
 + Cicerone
 + Koin
 + Retrofit
