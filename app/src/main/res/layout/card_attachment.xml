@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="115dp"
+    android:layout_height="82dp"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="24dp">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="extensionAttachment, nameAttachment, sizeAttachment" />
+
+    <ImageView
+        android:id="@+id/cardAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_image"
+        android:src="@drawable/attachment_background" />
+
+    <TextView
+        android:id="@+id/extensionAttachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="2dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/orange"
+        tools:text="xls" />
+
+    <TextView
+        android:id="@+id/nameAttachment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@id/sizeAttachment"
+        app:layout_constraintEnd_toEndOf="@id/sizeAttachment"
+        app:layout_constraintStart_toStartOf="@id/sizeAttachment"
+        tools:text="test" />
+
+    <TextView
+        android:id="@+id/sizeAttachment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonRemove"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="15mb" />
+
+    <ImageButton
+        android:id="@+id/buttonRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/clean"
+        android:padding="4dp"
+        android:src="@drawable/ic_cancel_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
