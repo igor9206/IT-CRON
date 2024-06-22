@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MainFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_margin="12dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_squares"
+        android:src="@drawable/img_squares"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivHead"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/company_logo"
+        android:src="@drawable/img_head_main_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/gotham_pro"
+        android:text="@string/cases"
+        android:textColor="@color/selector_text_button"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/tvCompany"
+        app:layout_constraintTop_toBottomOf="@id/ivHead"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/tvCompany"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_pro"
+        android:text="@string/company"
+        android:textColor="@color/selector_text_button"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/tvServices"
+        app:layout_constraintEnd_toEndOf="@id/tvCases"
+        app:layout_constraintStart_toStartOf="@id/tvCases"
+        app:layout_constraintTop_toBottomOf="@id/tvCases" />
+
+    <TextView
+        android:id="@+id/tvServices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_pro"
+        android:text="@string/services"
+        android:textColor="@color/selector_text_button"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/tvContacts"
+        app:layout_constraintEnd_toEndOf="@id/tvCompany"
+        app:layout_constraintStart_toStartOf="@id/tvCompany"
+        app:layout_constraintTop_toBottomOf="@id/tvCompany" />
+
+    <TextView
+        android:id="@+id/tvContacts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_pro"
+        android:text="@string/contacts"
+        android:textColor="@color/selector_text_button"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonApplication"
+        app:layout_constraintEnd_toEndOf="@id/tvServices"
+        app:layout_constraintStart_toStartOf="@id/tvServices"
+        app:layout_constraintTop_toBottomOf="@id/tvServices" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buttonApplication"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="32dp"
+        android:backgroundTint="@color/orange"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="?attr/colorControlNormal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/gotham_pro_bold"
+            android:text="@string/new_application"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_pro"
+        android:text="@string/email_it_cron"
+        android:textColor="@color/selector_text_button"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/ivFacebook"
+        app:layout_constraintStart_toStartOf="@id/ivFacebook"
+        app:layout_constraintTop_toTopOf="@id/buttonApplication" />
+
+    <ImageView
+        android:id="@+id/ivFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button_facebook"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_facebook_black"
+        app:layout_constraintBottom_toBottomOf="@id/buttonApplication"
+        app:layout_constraintEnd_toStartOf="@id/ivInstagram"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivInstagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button_instagram"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_instagram_black"
+        app:layout_constraintBottom_toBottomOf="@id/ivFacebook"
+        app:layout_constraintEnd_toStartOf="@id/ivTelegram"
+        app:layout_constraintStart_toEndOf="@id/ivFacebook"
+        app:layout_constraintTop_toTopOf="@id/ivFacebook" />
+
+    <ImageView
+        android:id="@+id/ivTelegram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button_telegram"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_telegram_black"
+        app:layout_constraintBottom_toBottomOf="@id/ivFacebook"
+        app:layout_constraintEnd_toStartOf="@id/buttonApplication"
+        app:layout_constraintStart_toEndOf="@id/ivInstagram"
+        app:layout_constraintTop_toTopOf="@id/ivFacebook" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

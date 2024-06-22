@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.error.ErrorInternetFragment">
+
+    <Button
+        android:id="@+id/buttonClose"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/close_button"
+        app:icon="@drawable/ic_close_24"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/gray" />
+
+    <ImageView
+        android:id="@+id/ivError"
+        android:layout_width="wrap_content"
+        android:layout_height="331dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
+        android:src="@drawable/img_error_internet_connection"
+        app:layout_constraintBottom_toTopOf="@id/tvError"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonClose" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_internet_connection"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivError" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+[versions]
+agp = "8.4.0"
+kotlin = "1.9.22"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.12.0"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+
+
+koinVersion = "3.5.6"
+ciceroneVersion = "7.1"
+retrofitVersion = "2.11.0"
+recyclerViewVersion = "1.3.2"
+glideVersion = "4.16.0"
+lifecycleVersion = "2.8.0"
+storiesprogressview = "3.0.0"
+imagepicker = "2.1"
+inputMaskAndroid = "7.2.4"
+firebaseBomVersion = "33.1.0"
+
+gmsPluginVersion = "4.4.2"
+crashliticsPluginVersion = "3.0.1"
+
+[libraries]
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinVersion" }
+terrakok-cicerone = { group = "com.github.terrakok", name = "cicerone", version.ref = "ciceroneVersion" }
+retrofit2-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+retrofit2-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+recycler-view = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerViewVersion" }
+android-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleVersion" }
+storiesprogressview = { module = "com.github.shts:StoriesProgressView", version.ref = "storiesprogressview" }
+imagepicker = { module = "com.github.dhaval2404:imagepicker", version.ref = "imagepicker" }
+input-mask-android = { module = "com.redmadrobot:input-mask-android", version.ref = "inputMaskAndroid" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-crashlitics = { module = "com.google.firebase:firebase-crashlytics" }
+
+
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+gmsGoogleServices = { id = "com.google.gms.google-services", version.ref = "gmsPluginVersion" }
+crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashliticsPluginVersion" }
+

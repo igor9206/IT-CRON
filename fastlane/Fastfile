@@ -1,0 +1,57 @@
+firebase_app_id = "1:819262624746:android:49d5c16234ef5c97e19893"
+
+default_platform :android
+
+platform :android do
+
+  desc "Develop environment - Debug configuration"
+  lane :debug do
+    build_and_archive(testers: "itcron", build_type: "debug", app_id: firebase_app_id)
+  end
+
+  desc "Develop environment - Release configuration"
+  lane :release do
+    build_and_archive(testers: "itcron", build_type: "release", app_id: firebase_app_id)
+  end
+# PRIVATE LANES #
+
+  private_lane :build_and_archive do |options|
+
+    version = ENV["BITRISE_BUILD_NUMBER"]
+
+	# 0. update fastlane
+	update_fastlane
+
+    # 1. build application
+    gradle(task: "assemble", build_type: options[:build_type], properties: { "versionCode" => version})
+
+    # 2. changelog generation
+    sh('git fetch --tags')
+    last_tag_hash = last_git_tag
+    commit = last_git_commit
+    commit_hash = commit[:commit_hash]
+    whats_new = changelog_from_git_commits(
+      commits_count: 30,
+      pretty: "%s",
+      date_format: "short",
+      match_lightweight_tag: false,
+      merge_commit_filtering: "exclude_merges"
+    )
+
+    # 3. copy apk to BITRISE_DEPLOY_DIR
+    artifact_path = lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]
+    copy_artifacts(
+      artifacts: [artifact_path],
+      target_path: ENV["BITRISE_DEPLOY_DIR"]
+    )
+
+    # 4. firebase upload
+    firebase_app_distribution(
+      app: options[:app_id],
+      groups: options[:testers],
+      release_notes: whats_new,
+      android_artifact_type: "APK"
+    )
+  end
+
+end

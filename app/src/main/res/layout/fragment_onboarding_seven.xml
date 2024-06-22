@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.onboarding.OnboardingSevenFragment">
+
+    <ImageView
+        android:id="@+id/ivMain"
+        android:layout_width="194dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="69dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/img_onboarding_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/gotham_pro_bold"
+        android:lineSpacingExtra="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/onboarding_seven_head"
+        android:textColor="@color/orange"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ivMain" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/gotham_pro"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/onboarding_seven_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tvHead"
+        app:layout_constraintStart_toStartOf="@id/tvHead"
+        app:layout_constraintTop_toBottomOf="@id/tvHead" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buttonNext"
+        style="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginVertical="40dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="?attr/colorControlNormal"
+        app:strokeColor="@color/orange">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gotham_pro"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

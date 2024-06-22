@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/gotham_pro"
+        android:gravity="center_horizontal"
+        android:text="@string/become_a_customer"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tvEmailItCron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/gotham_pro"
+        android:paddingVertical="8dp"
+        android:text="@string/email_it_cron"
+        android:textColor="@color/selector_text_button"
+        android:textSize="32sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buttonApplication"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="204dp"
+        android:layout_height="204dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        app:cardBackgroundColor="@color/orange"
+        app:cardCornerRadius="102dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/gotham_pro"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/new_application"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        android:text="@string/country"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:autoLink="phone"
+        android:lineSpacingExtra="16dp"
+        android:text="@string/address"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorLink="@color/orange"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="@string/contact_via"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTelegramBottom"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="64dp"
+        android:contentDescription="@string/telegram"
+        app:icon="@drawable/ic_telegram_black"
+        app:iconSize="60dp"
+        app:iconTint="@color/white" />
+</LinearLayout>
